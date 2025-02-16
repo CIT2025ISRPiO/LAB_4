@@ -1,0 +1,31 @@
+.movie-app {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.movie-app__title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.movie-app__search,
+.movie-app__filter {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #212121;
+  border-radius: 5px;
+  background: #181818;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}

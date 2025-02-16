@@ -1,0 +1,136 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  height: calc(100vh - 2rem);
+}
+
+.movie-app {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.movie-app__title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.movie-app__search,
+.movie-app__filter {
+  width: calc(100% - 10px * 2);
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #212121;
+  border-radius: 5px;
+  background: #181818;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.movie-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.movie-item {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  width: calc(100% - 30px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.movie-item__poster {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.movie-item__title {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.movie-list__empty {
+  font-size: 20px;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .movie-app {
+    padding: 15px;
+  }
+
+  .movie-app__title {
+    font-size: 24px;
+  }
+
+  .movie-app__search,
+  .movie-app__filter {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .movie-list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .movie-item__title {
+    font-size: 16px;
+  }
+}
+
+.movie-item__fav-btn {
+  z-index: inherit;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.movie-item__fav-btn.add {
+  background-color: #0BDA51;
+  color: white;
+}
+
+.movie-item__fav-btn.remove {
+  background-color: #EE204D;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .movie-item__fav-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-list {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-item__title {
+    font-size: 14px;
+  }
+}
